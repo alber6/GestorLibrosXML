@@ -7,46 +7,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="main.js" defer></script>
 </head>
-<body>
+<body class="d-flex justify-content-center align-items-center bg-light">
+    <div class="card p-4 m-3 shadow-lg rounded">
     <h2 class="text-center bg-primary text-white p-4 rounded">Gestor de libros para una biblioteca</h2>
-    <div>
+        <div class="card text-center rounded p-3 m-4">
+            <input class="m-3" type="text" id="titulo" placeholder="Titulo">
+            <input class="m-3" type="autor" id="autor" placeholder="Autor">
+            <input class="m-3" type="number" id="publicacion" placeholder="Año de publicación">
         
-    </div>
-    <div class="card text-center rounded p-3 m-4">
-        <input class="m-3" type="text" id="titulo" placeholder="Titulo">
-        <input class="m-3" type="autor" id="autor" placeholder="Autor">
-        <input class="m-3" type="number" id="publicacion" placeholder="Año de publicación">
-    
-        <div class="disponible">
-            <label>Disponible: <input type="radio" name="disponible" value="si"> Si</label>
-            <label><input type="radio" name="disponible" value="no"> No</label>
+            <div class="disponible">
+                <label>Disponible: <input type="radio" name="disponible" value="si"> Si</label>
+                <label><input type="radio" name="disponible" value="no"> No</label>
+            </div>
+        
+            <button class="btn btn-primary m-3" id="agregar">Guardar libro</button>
+            <button class="btn btn-primary text-dark mt-2" id="actualizar" style="display: none;">Actualizar libro</button>
         </div>
     
-        <button class="btn btn-primary m-3" id="agregar">Guardar libro</button>
-        <button class="btn btn-primary text-dark mt-2" id="actualizar" style="display: none;">Actualizar libro</button>
-    </div>
-
-    <div class=" card border-dark text-center rounded p-3 m-4">
-        <button class="btn btn-primary text-dark m-3 fw-bold" onclick="descargarXML()">Descargar XML</button>
-        <div class="d-flex justify-content-center align-items-center">
-            <input type="file" accept=".xml" id="fileInput" class="form-control">
+        <div class=" card border-dark text-center rounded p-3 m-4">
+            <button class="btn btn-primary text-dark m-3 fw-bold" onclick="descargarXML()">Descargar XML</button>
+            <div class="d-flex justify-content-center align-items-center">
+                <input type="file" accept=".xml" id="fileInput" class="form-control">
+            </div>
+        </div>
+    
+        <h3 class="text-center bg-primary text-white p-4 m-4 rounded">Lista de libros</h3>
+        <div class="table-responsive m-2">
+            <table class="table table-bordered">
+                <thead class="thead-dark text-center">
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Año de publicación</th>
+                        <th>Disponible</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaLibros"></tbody>
+            </table>
         </div>
     </div>
-
-    <h3 class="text-center bg-primary text-white p-4 m-4 rounded">Lista de libros</h3>
-    <div class="table-responsive m-2">
-        <table class="table table-bordered">
-            <thead class="thead-dark text-center">
-                <tr>
-                    <th>Título</th>
-                    <th>Autor</th>
-                    <th>Año de publicación</th>
-                    <th>Disponible</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody id="tablaLibros"></tbody>
-        </table>
-    </div>
+    
 </body>
 </html>
