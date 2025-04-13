@@ -49,8 +49,8 @@ function actualizarTabla(){
             <td>${libro.publicacion}</td>
             <td>${libro.disponible}</td>
             <td>
-                <button class="btn btn-primary text-dark m-3 w-50 fw-bold" onclick="editarLibro(${index})">Modificar</button>
-                <button class="btn btn-primary text-dark m-3 w-50 fw-bold" onclick="borrarLibro(${index})">Eliminar</button>
+                <button class="btn btn-success text-dark w-75 m-3 fw-bold" onclick="editarLibro(${index})">Modificar</button>
+                <button class="btn btn-danger text-dark w-75 m-3 fw-bold" onclick="borrarLibro(${index})">Eliminar</button>
             </td>
         </tr>`;
         tabla.innerHTML += fila;
